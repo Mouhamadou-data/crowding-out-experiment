@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Phase 4 Instructions{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h2>Phase 4: Another Paid Round</h2>
+        <div class="alert alert-success">
+            <h4>Payment Scheme: {{ treatment_type }}</h4>
+            <p>{{ payment_description }}</p>
+        </div>
+        <div class="alert alert-info">
+            <strong>Example:</strong> {{ example }}
+        </div>
+        <h4>What You Need to Know</h4>
+        <ul>
+            <li>This round lasts <strong>3 minutes</strong></li>
+            <li>You will see a <strong>new grid</strong> of letters</li>
+            <li>Your earnings depend on your performance</li>
+        </ul>
+        {% next_button %}
+    </div>
+</div>
+{% endblock %}

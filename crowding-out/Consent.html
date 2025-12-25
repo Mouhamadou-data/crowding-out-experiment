@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Informed Consent{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h2>Research Study: Problem-Solving Under Different Conditions</h2>
+        <p><strong>Researcher:</strong> SENE Mouhamadou, Burgundy School of Business</p>
+        <h4>Purpose of the Study</h4>
+        <p>You are invited to participate in a research study examining problem-solving behavior. The study will take approximately 17 minutes.</p>
+        <h4>What You Will Do</h4>
+        <ul>
+            <li>Complete several rounds of word puzzle tasks</li>
+            <li>Answer brief questionnaires about your experience</li>
+            <li>Provide basic demographic information</li>
+        </ul>
+        <h4>Compensation</h4>
+        <p>You will receive a show-up fee of €5.00, plus additional earnings based on your performance (up to €6.00 additional). Total: €5.00 to €11.00.</p>
+        <h4>Confidentiality</h4>
+        <p>Your responses will be kept confidential and stored securely.</p>
+        <h4>Voluntary Participation</h4>
+        <p>Your participation is voluntary. You may withdraw at any time without penalty.</p>
+        <hr>
+        <div class="alert alert-info">
+            <strong>By clicking "I Agree" below, you confirm that:</strong>
+            <ul>
+                <li>You are at least 18 years old</li>
+                <li>You have read and understood the information above</li>
+                <li>You voluntarily agree to participate</li>
+            </ul>
+        </div>
+        <button class="btn btn-primary" type="submit">I Agree</button>
+    </div>
+</div>
+{% endblock %}

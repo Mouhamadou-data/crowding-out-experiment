@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Instructions{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h2>Task Instructions</h2>
+        <h4>The Word Puzzle Task</h4>
+        <ul>
+            <li>You will see a <strong>4×4 grid of letters</strong></li>
+            <li>Find as many <strong>valid English words</strong> as possible</li>
+            <li>Words must be <strong>at least 4 letters long</strong></li>
+            <li>Connect <strong>adjacent letters</strong> (horizontally, vertically, or diagonally)</li>
+            <li>Each letter can only be used <strong>once per word</strong></li>
+        </ul>
+        <h4>How to Submit Words</h4>
+        <ol>
+            <li>Type a word in the input box</li>
+            <li>Press <strong>Enter</strong> to submit</li>
+        </ol>
+        <div class="alert alert-warning">
+            <strong>Important:</strong> Each round is timed. You cannot submit the same word twice.
+        </div>
+        <h4>Structure</h4>
+        <ol>
+            <li><strong>Practice round (1 minute)</strong></li>
+            <li><strong>Five main rounds (3 minutes each)</strong></li>
+            <li>Some rounds are <strong>paid</strong>, some are <strong>unpaid</strong></li>
+        </ol>
+        {% next_button %}
+    </div>
+</div>
+{% endblock %}

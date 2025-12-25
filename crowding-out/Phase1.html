@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}Phase 1{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<!-- Hidden field must be INSIDE oTree’s auto-generated form -->
+<input type="hidden" name="phase1_words" id="hidden-words-field">
+
+<div class="text-center">
+    <h2>{{ phase_name }}</h2>
+    <p class="lead">Find as many words as you can. This round is <strong>not paid</strong>.</p>
+    <p><strong>Time limit: 3 minutes</strong></p>
+</div>
+
+<div id="puzzle-container"></div>
+
+<script src="{% static 'puzzle.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initializePuzzle('{{ grid_phase }}', {{ duration }}, 'phase1_words');
+    });
+</script>
+{% endblock %}

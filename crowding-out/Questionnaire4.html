@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Quick Survey{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h2>Questions About Your Experience</h2>
+        <p>Please answer about the <strong>{{ treatment_name }}</strong> round you just completed.</p>
+        <p><em>1 = Strongly Disagree, 7 = Strongly Agree</em></p>
+        <hr>
+        {% for field in form %}
+            <div class="form-group mb-3">
+                {% formfield field %}
+            </div>
+        {% endfor %}
+        {% next_button %}
+    </div>
+</div>
+{% endblock %}

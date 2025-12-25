@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body text-center">
+        <h2>Experiment Complete!</h2>
+        <p class="lead">Thank you for participating in our study.</p>
+        <hr>
+        <h3>Your Earnings</h3>
+        <table class="table table-bordered" style="max-width: 500px; margin: 20px auto;">
+            <tr>
+                <td><strong>Show-up Fee</strong></td>
+                <td>{{ show_up_fee }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phase 2 Earnings</strong></td>
+                <td>{{ phase2_earnings }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phase 4 Earnings</strong></td>
+                <td>{{ phase4_earnings }}</td>
+            </tr>
+            <tr class="table-success">
+                <td><strong>TOTAL PAYMENT</strong></td>
+                <td><strong>{{ total_payment }}</strong></td>
+            </tr>
+        </table>
+        <div class="alert alert-info">
+            <p><strong>Payment will be processed shortly.</strong></p>
+        </div>
+        <p class="text-muted">You may now close this window.</p>
+    </div>
+</div>
+{% endblock %}
